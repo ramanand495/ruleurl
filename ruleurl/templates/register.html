@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body_block %}
+    <div class="col-lg-3 d-none d-lg-block text-center">
+    </div>
+    <div style="color:black" class="col-lg-6 mt-5">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h1 class="text-center">Register to get <strong>Extra Benefits</strong></h1>
+            </div>
+            <div class="card-header">
+                <h3 class="text-center">Sign Up Today</h3>
+            </div>
+            <div class="card-body"> 
+              <p>Please Fill up the form to Register</p>
+              <form method="POST">
+                      {% csrf_token %}
+                      {{ form.as_p  }}
+                <input type="submit" class="btn btn-outligh-light btn-block">
+              </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
